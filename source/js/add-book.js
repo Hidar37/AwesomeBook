@@ -106,29 +106,28 @@ if (localStorage.getItem('StorageBooks') !== null) {
 
 setInterval(showDate, 1000);
 // Hide and show Pages
-// window.addEventListener('load', (event) => {
-//   console.log('page is fully loaded');
-// });
-document.getElementById('new-book').style.display = 'none';
-document.getElementById('contact').style.display = 'none';
+
 // showbook
 bookShow.addEventListener('click', (even) => {
     even.preventDefault();
-    bookShow.style.display = 'block';
-    bookNew.style.display = 'none';
-    showContact.style.display = 'none';
+    document.getElementById('new-book').style.display = 'none';
+    document.getElementById('book-list').style.display = 'block';
+    document.getElementById('contact').style.display = 'none';
 });
 // add Book
 bookNew.addEventListener('click', (even) => {
     even.preventDefault();
-    bookShow.style.display = 'none';
-    bookNew.style.display = 'block';
-    showContact.style.display = 'none';
+		
+		document.getElementById('new-book').style.display = 'block';
+    document.getElementById('book-list').style.display = 'none';
+    document.getElementById('contact').style.display = 'none';
 });
+
+
 // Contact
 showContact.addEventListener('click', (even) => {
     even.preventDefault();
-    bookNew.style.display = 'none';
-    bookShow.style.display = 'none';
-    showContact.style.display = 'block';
+		document.getElementById('new-book').style.display = 'none';
+    document.getElementById('book-list').style.display = 'none';
+    document.getElementById('contact').style.display = 'block';
 });

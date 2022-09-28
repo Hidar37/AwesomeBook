@@ -127,6 +127,12 @@ header h1 {
 }
 
 /* new book section */
+#section, 
+#new-book,
+#book-list {
+  display: none;
+}
+
 .form-header {
   color: #7b90f7;
   text-align: center;
