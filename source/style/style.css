@@ -22,6 +22,7 @@
   padding: 0;
   margin: 0;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 /* Nav */
@@ -71,7 +72,6 @@ header #date {
   font-family: sm;
 }
 
-
 header h1 {
   color: #7b90f8;
   text-align: center;
@@ -86,19 +86,6 @@ header h1 {
   width: 50%;
   margin: 0 auto 3rem;
   position: relative;
-}
-
-#book-list::after {
-  content: "";
-  width: 20%;
-  height: 2px;
-  border-radius: 0 5px 0 5px;
-  background-color: gray;
-  position: absolute;
-  top: 115%;
-  left: 40%;
-  right: 40%;
-  margin: 0 auto;
 }
 
 #book-list div:nth-child(odd) {
@@ -206,21 +193,49 @@ form input[type=submit]:hover {
   text-align: center;
 }
 
+.p-wrapper {
+  width: 50%;
+  margin: 0 auto;
+  font-family: md;
+  font-size: 1.5rem;
+}
 
-/*Footer*/
+.p1 {
+  margin-left: 1rem;
+}
+
+.p2 {
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+.p-wrapper ul {
+  margin-left: 4rem;
+}
+
+/* Footer */
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid #000;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 9%;
   padding: 1rem;
   font-family: lg;
 }
 
+/* dynamic Application Logic */
+.hide {
+  display: none;
+  transition: all 0.3s;
+}
 
-
+.show {
+  display: block;
+  transition: all 0.3s;
+}
 
 /* Mobile Version */
 @media screen and (max-width: 768px) {
@@ -250,5 +265,3 @@ footer {
     font-size: 1.2rem;
   }
 }
-
-

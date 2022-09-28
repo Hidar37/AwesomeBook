@@ -1,45 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Awesoem Book Store</title>
-    <!-- Fontawesome cdn -->
-    <!-- <script src="https://kit.fontawesome.com/27219c429c.js" crossorigin="anonymous"></script> -->
-    <!-- Main css style -->
-    <link rel="stylesheet" href="source/style/style.css" />
-  </head>
 
-  <body>
-    <nav class="nav-wrapper">
-      <a href="index.html" id="logo">Awesome Book</a>
-      <ul class="nav-ul">
-        <li class="nav-item" id="show-book"><a href="#book-list" class="nav-link">Book List</a></li>
-        <li class="nav-item" id="border-both"><a href="#new-book" class="nav-link">Add New</a></li>
-        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Awesoem Book Store</title>
+  <!-- Fontawesome cdn -->
+  <!-- <script src="https://kit.fontawesome.com/27219c429c.js" crossorigin="anonymous"></script> -->
+  <!-- Main css style -->
+  <link rel="stylesheet" href="source/style/style.css" />
+</head>
+
+<body>
+  <nav class="nav-wrapper">
+    <a href="index.html" id="logo">Awesome Book</a>
+    <ul class="nav-ul">
+      <li class="nav-item" id="show-book"><a href="#book-list" class="nav-link" id="book-show">Book List</a></li>
+      <li class="nav-item" id="border-both"><a href="#new-book" class="nav-link" id="book-new">Add New</a></li>
+      <li class="nav-item"><a href="#contact" class="nav-link" id="show-contact">Contact</a></li>
+    </ul>
+  </nav>
+  <header>
+    <p id="date"></p>
+    <h1>All awesome books</h1>
+  </header>
+  <section id="book-list" class="book-display">
+    <!-- Show all books -->
+
+  </section>
+  <section class="form-section" id="new-book">
+    <h2 class="form-header">Add A New Book</h2>
+    <form action="#" method="GET" id="form">
+      <input type="text" placeholder="title" id="title" required>
+      <input type="text" placeholder="author" id="author" required>
+      <input type="submit" value="Add" id="submit-btn">
+    </form>
+  </section>
+  <!-- Contact Section -->
+  <section class="form-section" id="contact">
+    <h2 class="form-header">Contact Information</h2>
+    <div class="p-wrapper">
+      <p class="p1">Do you have any questions or just want to say "Hello"?</p>
+      <p class="p2">You can reach out to us!</p>
+      <ul>
+        <li>Our Email: Microvers@gmail.com</li>
+        <li>Our Phone Number: 0795810811</li>
+        <li>Our Address: 3rd street of kart-e-now Kabul Afghanistan</li>
       </ul>
-    </nav>
-    <header>
-      <p id="date"></p>
-      <h1>All awesome books</h1>
-    </header>
-    <section id="book-list" class="book-display">
-      <!-- Show all books -->
+    </div>
+  </section>
+  <footer>
+    <p class="copyright">&copy;copyright</p>
+  </footer>
+  <!-- Add Book.js -->
+  <script src="source/js/add-book.js"></script>
+</body>
 
-    </section>
-    <section class="form-section" id="new-book">
-      <h2 class="form-header">Add A New Book</h2>
-      <form action="#" method="GET" id="form">
-        <input type="text" placeholder="title" id="title" required>
-        <input type="text" placeholder="author" id="author" required>
-        <input type="submit" value="Add" id="submit-btn">
-      </form>
-    </section>
-    <footer>
-      <p class="copyright">&copy;copyright</p>
-    </footer>
-    <!-- Add Book.js -->
-    <script src="source/js/add-book.js"></script>
-  </body>
 </html>

@@ -4,12 +4,17 @@
 /* eslint-disable indent */
 
 const booksContainer = document.getElementById('book-list');
-
 const formContainer = document.getElementById('form');
-
 const bookList = [];
 const title = document.getElementById('title');
 const author = document.getElementById('author');
+// Date
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const dateDisplay = document.getElementById('date');
+// nav link
+const bookShow = document.getElementById('book-show');
+const bookNew = document.getElementById('book-new');
+const showContact = document.getElementById('show-contact');
 
 class BookClass {
     constructor(title, author) {
@@ -69,6 +74,23 @@ class BookClass {
     }
 }
 
+function showDate() {
+    const dateObj = new Date();
+    const month = months[dateObj.getMonth()];
+    const day = dateObj.getDay();
+    const year = dateObj.getFullYear();
+    const hour = dateObj.getHours();
+    const minutes = dateObj.getMinutes();
+    const secnod = dateObj.getSeconds();
+    let amPM = null;
+    if (hour >= 12) {
+        amPM = 'PM';
+    } else {
+        amPM = 'AM';
+    }
+    dateDisplay.innerText = `${month} ${day}th ${year}\\ ${hour}:${minutes}:${secnod}${amPM}`;
+}
+
 const btnMethod = new BookClass(title, author);
 
 formContainer.addEventListener('submit', (e) => {
@@ -82,15 +104,31 @@ if (localStorage.getItem('StorageBooks') !== null) {
     localStorage.setItem('StorageBooks', JSON.stringify(btnMethod.bookList));
 }
 
-//Date 
-
-
-
-const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-const dateDisplay = document.getElementById('date');
-
-
-setInterval(function () {
-	const dateObj = new Date();
-	dateDisplay.innerText = `${months[dateObj.getMonth()]} ${dateObj.getDay()}th ${dateObj.getFullYear()}\ ${dateObj.getHours()}:${dateObj.getMinutes()}:${dateObj.getSeconds()}`;
-}, 1000);
+setInterval(showDate, 1000);
+// Hide and show Pages
+// window.addEventListener('load', (event) => {
+//   console.log('page is fully loaded');
+// });
+document.getElementById('new-book').style.display = 'none';
+document.getElementById('contact').style.display = 'none';
+// showbook
+bookShow.addEventListener('click', (even) => {
+    even.preventDefault();
+    bookShow.style.display = 'block';
+    bookNew.style.display = 'none';
+    showContact.style.display = 'none';
+});
+// add Book
+bookNew.addEventListener('click', (even) => {
+    even.preventDefault();
+    bookShow.style.display = 'none';
+    bookNew.style.display = 'block';
+    showContact.style.display = 'none';
+});
+// Contact
+showContact.addEventListener('click', (even) => {
+    even.preventDefault();
+    bookNew.style.display = 'none';
+    bookShow.style.display = 'none';
+    showContact.style.display = 'block';
+});
