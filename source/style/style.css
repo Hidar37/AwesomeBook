@@ -23,3 +23,98 @@
   margin: 0;
   font-size: 16px;
 }
+
+
+/*
+#######################################################################
+#+++++++++++++++++++++++++++FORM SECTION++++++++++++++++++++++++++++++#
+######################################################################
+*/
+.form-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+#form{
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+#submit-btn {
+  margin-right: auto;
+}
+
+input[type='text']{
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+}
+
+input[type='submit']{
+  max-width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border: 1px solid #ccc;
+}
+
+
+/*
+#######################################################################
+#+++++++++++++++++++++++++++BOOK CONTAINER++++++++++++++++++++++++++++++#
+######################################################################
+*/
+
+.book-container {
+  border: 1px solid black;
+  display: inline-flex;
+  min-width: 400px;
+  justify-content: space-around;
+  margin: 10px;
+  padding: 5px;
+  background-color: #ccc;
+
+}
+.book-container > p {
+  flex: 1;
+}
+
+.remove{
+  border: 3px solid black;
+  padding: 5px;
+}
+
+.form-line {
+  width: 100px;
+  height: 3px;
+  border: 2px solid black;
+  margin: 20px;
+}
+
+.book-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#main-book {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  flex-wrap: wrap;
+}
