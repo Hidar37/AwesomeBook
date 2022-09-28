@@ -24,7 +24,51 @@
   font-size: 16px;
 }
 
+/* Nav */
+.nav-wrapper {
+  border: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  font-family: lg;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.nav-wrapper #logo {
+  text-decoration: none;
+  color: #7b90f7;
+  transition: all 0.3s;
+}
+
+.nav-ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+#border-both {
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+}
+
+.nav-item .nav-link {
+  padding: 1rem;
+  color: #7b90f7;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.nav-item .nav-link:hover,
+.nav-wrapper #logo:hover {
+  color: #1d40ec;
+}
+
 /* Header Section */
+header #date {
+  text-align: right;
+  margin-right: 2rem;
+}
+
 header h1 {
   color: #7b90f8;
   text-align: center;
