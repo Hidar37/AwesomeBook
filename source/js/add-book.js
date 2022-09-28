@@ -117,17 +117,16 @@ bookShow.addEventListener('click', (even) => {
 // add Book
 bookNew.addEventListener('click', (even) => {
     even.preventDefault();
-		
-		document.getElementById('new-book').style.display = 'block';
+
+    document.getElementById('new-book').style.display = 'block';
     document.getElementById('book-list').style.display = 'none';
     document.getElementById('contact').style.display = 'none';
 });
 
-
 // Contact
 showContact.addEventListener('click', (even) => {
     even.preventDefault();
-		document.getElementById('new-book').style.display = 'none';
+    document.getElementById('new-book').style.display = 'none';
     document.getElementById('book-list').style.display = 'none';
     document.getElementById('contact').style.display = 'block';
 });
