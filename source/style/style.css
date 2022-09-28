@@ -22,11 +22,58 @@
   padding: 0;
   margin: 0;
   font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+/* Nav */
+.nav-wrapper {
+  border: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  font-family: lg;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.nav-wrapper #logo {
+  text-decoration: none;
+  color: #7b90f7;
+  transition: all 0.3s;
+}
+
+.nav-ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+#border-both {
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+}
+
+.nav-item .nav-link {
+  padding: 1rem;
+  color: #7b90f7;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.nav-item .nav-link:hover,
+.nav-wrapper #logo:hover {
+  color: #1d40ec;
 }
 
 /* Header Section */
+header #date {
+  text-align: right;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  font-family: sm;
+}
+
 header h1 {
-  color: #7b90f7;
+  color: #7b90f8;
   text-align: center;
   font-size: 3rem;
   padding: 0;
@@ -39,19 +86,6 @@ header h1 {
   width: 50%;
   margin: 0 auto 3rem;
   position: relative;
-}
-
-#book-list::after {
-  content: "";
-  width: 20%;
-  height: 2px;
-  border-radius: 0 5px 0 5px;
-  background-color: gray;
-  position: absolute;
-  top: 115%;
-  left: 40%;
-  right: 40%;
-  margin: 0 auto;
 }
 
 #book-list div:nth-child(odd) {
@@ -93,6 +127,12 @@ header h1 {
 }
 
 /* new book section */
+#section,
+#new-book,
+#book-list {
+  display: none;
+}
+
 .form-header {
   color: #7b90f7;
   text-align: center;
@@ -157,6 +197,50 @@ form input[type=submit]:hover {
   font-size: 1.2rem;
   font-family: lg;
   text-align: center;
+}
+
+.p-wrapper {
+  width: 50%;
+  margin: 0 auto;
+  font-family: md;
+  font-size: 1.5rem;
+}
+
+.p1 {
+  margin-left: 1rem;
+}
+
+.p2 {
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+.p-wrapper ul {
+  margin-left: 4rem;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 9%;
+  padding: 1rem;
+  font-family: lg;
+}
+
+/* dynamic Application Logic */
+.hide {
+  display: none;
+  transition: all 0.3s;
+}
+
+.show {
+  display: block;
+  transition: all 0.3s;
 }
 
 /* Mobile Version */
