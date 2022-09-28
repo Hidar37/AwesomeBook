@@ -81,3 +81,16 @@ if (localStorage.getItem('StorageBooks') !== null) {
 } else {
     localStorage.setItem('StorageBooks', JSON.stringify(btnMethod.bookList));
 }
+
+//Date 
+
+
+
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const dateDisplay = document.getElementById('date');
+
+
+setInterval(function () {
+	const dateObj = new Date();
+	dateDisplay.innerText = `${months[dateObj.getMonth()]} ${dateObj.getDay()}th ${dateObj.getFullYear()}\ ${dateObj.getHours()}:${dateObj.getMinutes()}:${dateObj.getSeconds()}`;
+}, 1000);

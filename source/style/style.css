@@ -67,7 +67,10 @@
 header #date {
   text-align: right;
   margin-right: 2rem;
+  margin-left: 2rem;
+  font-family: sm;
 }
+
 
 header h1 {
   color: #7b90f8;
@@ -203,6 +206,22 @@ form input[type=submit]:hover {
   text-align: center;
 }
 
+
+/*Footer*/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 1rem;
+  font-family: lg;
+}
+
+
+
+
 /* Mobile Version */
 @media screen and (max-width: 768px) {
   #book-list {
@@ -231,3 +250,5 @@ form input[type=submit]:hover {
     font-size: 1.2rem;
   }
 }
+
+

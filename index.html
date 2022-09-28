@@ -13,21 +13,22 @@
 
   <body>
     <nav class="nav-wrapper">
-      <a href="#" id="logo">Awesoem Book</a>
+      <a href="index.html" id="logo">Awesome Book</a>
       <ul class="nav-ul">
-        <li class="nav-item"><a href="#book-list" class="nav-link">Book List</a></li>
-        <li class="nav-item" id="border-both"><a href="#newBook" class="nav-link">Add New</a></li>
+        <li class="nav-item" id="show-book"><a href="#book-list" class="nav-link">Book List</a></li>
+        <li class="nav-item" id="border-both"><a href="#new-book" class="nav-link">Add New</a></li>
         <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </nav>
     <header>
-      <p id="date">0000/00/00</p>
+      <p id="date"></p>
       <h1>All awesome books</h1>
     </header>
     <section id="book-list" class="book-display">
       <!-- Show all books -->
+
     </section>
-    <section class="form-section">
+    <section class="form-section" id="new-book">
       <h2 class="form-header">Add A New Book</h2>
       <form action="#" method="GET" id="form">
         <input type="text" placeholder="title" id="title" required>
@@ -35,6 +36,9 @@
         <input type="submit" value="Add" id="submit-btn">
       </form>
     </section>
+    <footer>
+      <p class="copyright">&copy;copyright</p>
+    </footer>
     <!-- Add Book.js -->
     <script src="source/js/add-book.js"></script>
   </body>
